@@ -16,5 +16,6 @@ Route::get('/', function () {
 });
 
 Route::prefix('upwork')->group(function () {
+    Route::get('pg010e53fd1cb4eab86e/export', 'UpworkController@export');
     CRUD::resource('pg010e53fd1cb4eab86e', 'UpworkController');
 });
