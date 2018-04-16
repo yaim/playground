@@ -16,7 +16,7 @@ try {
 		$dsn = "pgsql:dbname={$database};host={$host};port={$port}";
 		$conn = new PDO($dsn, $username, $password);
 	} else {
-		$dsn = 'sqlite:'.getenv("HOME").'/database/database.sqlite';
+		$dsn = 'sqlite:'.$database;
 		$conn = new PDO($dsn);
 	}
 } catch (PDOException $e) {
